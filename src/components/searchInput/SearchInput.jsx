@@ -45,10 +45,7 @@ export const SearchInput = () => {
     );
   };
 
-  let totalPages = 0;
-  if (data) {
-    totalPages = Math.ceil(+data.totalResults / 10);
-  }
+  const totalPages = data ? Math.ceil(+data?.totalResults / 10) : 0;
   return (
     <>
       <div className={styles.container}>
